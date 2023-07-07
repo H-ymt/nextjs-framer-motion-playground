@@ -7,7 +7,6 @@ import { useState } from "react";
 import cx from "classnames";
 import { FaWallet } from "react-icons/fa";
 
-
 export default function Header() {
   const [isOpen, setOpen] = useState<boolean>(false);
   const handleMenu = () => {
@@ -44,7 +43,7 @@ export default function Header() {
             <div className={styles.button}>
               <Button href="/">
                 <FaWallet />
-                Connect Button
+                Connect
               </Button>
             </div>
           </ul>
