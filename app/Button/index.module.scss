@@ -1,4 +1,6 @@
 .button {
+  display: flex;
+  align-items: center;
   min-height: 32px;
   padding: 6px 18px;
   color: var(--color-text-primary);

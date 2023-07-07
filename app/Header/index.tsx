@@ -5,6 +5,13 @@ import styles from "./index.module.scss";
 import Button from "../Button";
 import { useState } from "react";
 import cx from "classnames";
+import { FaWallet } from "react-icons/fa";
+import { Abril_Fatface } from "next/font/google";
+
+const abril = Abril_Fatface({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Header() {
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -38,7 +45,13 @@ export default function Header() {
             <li className={styles.item} onClick={close}>
               <Link href="/">About</Link>
             </li>
-            <Button href="/">Contact Button</Button>
+
+            <div className={styles.button}>
+              <Button href="/">
+                <FaWallet />
+                Connect Button
+              </Button>
+            </div>
           </ul>
         </nav>
         <div className={cx(styles.mask, isOpen && styles.open)} onClick={close}></div>
