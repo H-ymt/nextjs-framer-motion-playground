@@ -1,0 +1,90 @@
+@import "/app/variable.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px;
+}
+
+.nav {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.nav.open {
+  display: block;
+  z-index: 40;
+  position: fixed;
+  inset: 0;
+  left: 35%;
+  height: 100vh;
+  background: rgb(130, 125, 125);
+}
+
+.mask {
+  display: none;
+}
+
+.mask.open {
+  display: block;
+  position: fixed;
+  z-index: 30;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000000bd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+}
+
+.search {
+  display: none;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 32px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border-primary);
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.search input {
+  padding: 12px 12px;
+  color: var(--color-text-primary);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.list.open {
+  height: 100vh;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hamburgerButton {
+  z-index: 50;
+  @include mq(md) {
+    display: none;
+  }
+}

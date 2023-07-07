@@ -1,0 +1,14 @@
+.button {
+  min-height: 32px;
+  padding: 6px 18px;
+  color: var(--color-text-primary);
+  border-radius: 16px;
+  background: var(--color-bg-secondary);
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  color: var(--color-bg-secondary);
+  background: var(--color-text-primary);
+  transition: 0.3s ease;
+}
