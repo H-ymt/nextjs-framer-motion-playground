@@ -4,6 +4,8 @@ import { Abril_Fatface } from "next/font/google";
 import Button from "./Components/Button";
 import styles from "./page.module.scss";
 import Image from "next/image";
+import Card from "./Components/Card";
+import { cards } from "./utils/cards";
 
 const abril = Abril_Fatface({
   subsets: ["latin"],
@@ -28,6 +30,19 @@ export default function Home() {
         </div>
 
         <Image className={styles.img} src="/top-img.jpg" alt="" width={500} height={333} />
+      </div>
+
+      <div>
+        {cards.map((card, index) => {
+          return (
+            <Card
+              key={index}
+              title={card.title}
+              description={card.description}
+              image={card.image}
+            />
+          );
+        })}
       </div>
     </>
   );
