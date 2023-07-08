@@ -1,10 +1,10 @@
-import "./globals.css";
+import "./globals.scss";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "ress";
-import Header from "./Header";
+import Header from "./Components/Header";
+import { Noto_Sans_JP } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const NotoSans = Noto_Sans_JP({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body>
+      <body className={NotoSans.className}>
         <Header />
         <main>{children}</main>
       </body>
