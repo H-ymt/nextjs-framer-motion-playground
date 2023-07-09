@@ -24,7 +24,6 @@ body {
 
 main {
   width: calc(100% - 40px);
-  height: 100vh;
   margin-inline: auto;
 
   @include mq(md) {

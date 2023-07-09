@@ -32,7 +32,7 @@ export default function Home() {
         <Image className={styles.img} src="/top-img.jpg" alt="" width={500} height={333} />
       </div>
 
-      <div>
+      <div className={styles.cards}>
         {cards.map((card, index) => {
           return (
             <Card
