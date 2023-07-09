@@ -11,17 +11,17 @@ type Props = {
 
 export default function Card({ title, description, image }: Props) {
   return (
-    <>
+    <div className={styles.container}>
       <div className="style.image" />
-      <p>New</p>
+      <p className={styles.new}>New</p>
       <div className={styles.text}>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
 
-      <Image className={styles.image} src={image} alt="" width={384} height={256} loading="lazy" />
+      <Image className={styles.image} src={image} alt="" width={384} height={210} loading="lazy" />
 
       <div className={styles.overlay}></div>
-    </>
+    </div>
   );
 }
